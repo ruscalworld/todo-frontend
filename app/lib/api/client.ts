@@ -2,7 +2,7 @@ import axios from 'axios'
 import { getToken, clearToken } from '~/lib/auth/token'
 
 export const apiClient = axios.create({
-  baseURL: 'https://todo.ruscal.world/api/v3',
+  baseURL: '/api/v3',
   headers: {
     'Content-Type': 'application/json',
   },
