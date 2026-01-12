@@ -19,7 +19,7 @@ export function AppBar() {
       <MuiAppBar position='fixed'>
         <Toolbar>
           <Typography variant='h6' component='div' sx={{ flexGrow: 0, mr: 4 }}>
-            ToDo App
+            { 'ToDo' }
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: 'flex', gap: 2 }}>
