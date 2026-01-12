@@ -19,8 +19,8 @@ function TaskCard({ task, onClick }: TaskCardProps) {
               { task.description || 'Нет описания' }
             </Typography>
           </Box>
-          { !!task.days_remaining && task.days_remaining >= 0 && (
-            <Chip label={ <>{ task.days_remaining } дн.</> }/>
+          { task.days_remaining != null && task.days_remaining >= 0 && (
+            <Chip label={ <>{ task.days_remaining } дн.</> } color={ task.days_remaining == 0 ? 'warning' : 'default' }/>
           ) }
           { !!task.days_remaining && task.days_remaining < 0 && (
             <Chip label='Просрочено' color='error'/>
