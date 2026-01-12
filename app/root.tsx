@@ -11,8 +11,15 @@ import { theme } from '~/lib/theme/muiTheme'
 import { SWRProvider } from '~/lib/swr/config'
 
 import type { Route } from './+types/root'
+import type { ReactNode } from 'react'
+
+export const meta: Route.MetaFunction = () => [
+  { title: 'Матрица Эйзенхауэра' },
+  { name: 'description', content: 'Управление задачами с использованием матрицы Эйзенхауэра' },
+]
 
 export const links: Route.LinksFunction = () => [
+  { rel: 'icon', href: '/favicon.ico', type: 'image/x-icon' },
   { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
   {
     rel: 'preconnect',
@@ -25,7 +32,7 @@ export const links: Route.LinksFunction = () => [
   },
 ]
 
-export function Layout({ children }: { children: React.ReactNode }) {
+export function Layout({ children }: { children: ReactNode }) {
   return (
     <html lang='ru'>
     <head>

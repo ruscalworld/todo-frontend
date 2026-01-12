@@ -3,6 +3,11 @@ import { useTodayTasks } from '~/hooks/useTasks'
 import { useTaskModal } from '~/hooks/useTaskModal'
 import { TaskList } from '~/components/tasks/TaskList'
 import { TaskModal } from '~/components/tasks/TaskModal'
+import type { Route } from './+types/_app.home'
+
+export const meta: Route.MetaFunction = () => [
+  { title: 'Сегодня | Матрица Эйзенхауэра' },
+]
 
 export default function HomePage() {
   const { tasks, isLoading } = useTodayTasks()

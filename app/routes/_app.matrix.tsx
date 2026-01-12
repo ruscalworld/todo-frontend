@@ -3,6 +3,11 @@ import { useTasks } from '~/hooks/useTasks'
 import { useTaskModal } from '~/hooks/useTaskModal'
 import { EisenhowerMatrix } from '~/components/matrix/EisenhowerMatrix'
 import { TaskModal } from '~/components/tasks/TaskModal'
+import type { Route } from './+types/_app.matrix'
+
+export const meta: Route.MetaFunction = () => [
+  { title: 'Матрица | Матрица Эйзенхауэра' },
+]
 
 export default function MatrixPage() {
   const { tasks, isLoading } = useTasks()

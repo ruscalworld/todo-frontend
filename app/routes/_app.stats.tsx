@@ -3,6 +3,11 @@ import { useTaskStats, useDeadlineStats } from '~/hooks/useStats'
 import { QuadrantChart } from '~/components/stats/QuadrantChart'
 import { StatusChart } from '~/components/stats/StatusChart'
 import { DeadlineChart } from '~/components/stats/DeadlineChart'
+import type { Route } from './+types/_app.stats'
+
+export const meta: Route.MetaFunction = () => [
+  { title: 'Статистика | Матрица Эйзенхауэра' },
+]
 
 export default function StatsPage() {
   const { stats: taskStats, isLoading: taskStatsLoading } = useTaskStats()

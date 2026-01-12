@@ -5,6 +5,11 @@ import { useSearchTasks } from '~/hooks/useTasks'
 import { useTaskModal } from '~/hooks/useTaskModal'
 import { TaskList } from '~/components/tasks/TaskList'
 import { TaskModal } from '~/components/tasks/TaskModal'
+import type { Route } from './+types/_app.search'
+
+export const meta: Route.MetaFunction = () => [
+  { title: 'Поиск | Матрица Эйзенхауэра' },
+]
 
 export default function SearchPage() {
   const [ query, setQuery ] = useState('')
